@@ -14,9 +14,9 @@ export default function Home() {
         <img className='w-full object-cover h-screen' src='https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80'></img>
         <div className='absolute top-64 right-48'>
           <h1 className='text-charcoal text-8xl font-bold font-heading'>PHS eCanteen</h1>
-          <button class="mt-10 inline-flex items-center px-36 py-4 bg-cherry-red hover:bg-apple-red text-white text-lg font-medium rounded-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+          <button className="mt-10 inline-flex items-center px-36 py-4 bg-cherry-red hover:bg-apple-red text-white text-lg font-medium rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
             </svg>
             Login
           </button>
