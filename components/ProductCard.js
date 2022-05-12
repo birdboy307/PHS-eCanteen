@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { toast } from 'react-hot-toast';
 
 const ProductCard = props => {
-  const { cartCount, addItem } = useShoppingCart();
   const [adding, setAdding] = useState(false);
 
   const toastId = useRef();
