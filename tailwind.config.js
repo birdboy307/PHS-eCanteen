@@ -5,16 +5,21 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'Home-bg': "url('../public/home-food-bg.jpg')",
+      },
       colors: {
-        'cherry-red': '#D41435',
-        'apple-red': '#FF002C',
         'charcoal': '#222222',
         'creamish': '#EAF2F4',
+        'pastel': '#7BEA71',
+        'pastel-hover': '#4FC844',
       },
       fontFamily: {
         heading: ['Dosis', 'sans-serif'],
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/aspect-ratio'),
+  ],
 }
