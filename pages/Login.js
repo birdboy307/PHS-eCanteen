@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 
 function Login() {
@@ -16,9 +17,11 @@ function Login() {
                     <span className='text-pastel'>e</span>Canteen</h3>
                 <div className="flex items-baseline justify-center mt-10">
                     <button className="w-full py-2 mt-4 font-bold duration-100 bg-pastel rounded-lg hover:bg-pastel-hover">
-                        <a className='w-full text-xl' href='/api/auth/login'>
-                            Login
-                        </a>
+                        <Link href='/api/auth/login'>
+                            <a className='w-full text-xl'>
+                                Login
+                            </a>
+                        </Link>
                     </button>
                 </div>
             </div>
