@@ -8,8 +8,6 @@ const Success = () => {
     query: { session_id },
   } = useRouter();
 
-  const { clearCart } = useShoppingCart();
-
   const { data, error } = useSWR(
     () => `/api/checkout_sessions/${session_id}`,
     fetcher
