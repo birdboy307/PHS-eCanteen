@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function Product(props) {
   return (
     <>
-    <div class="bg-white rounded-lg shadow-lg m-10 w-96">
+    <div className="bg-white rounded-lg shadow-lg m-10 w-96">
       <div className="">
         <img src={props.productimage} alt="" className="rounded-t-lg translate-x-8 object-scale-down h-64 w-80"/>
       </div>
