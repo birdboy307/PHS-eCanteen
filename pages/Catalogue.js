@@ -5,7 +5,7 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0';
 import Product from '../components/Product';
 import ImageTopper from '../components/ImageTopper';
 import Banner from '../components/Banner'
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
   return (
