@@ -8,8 +8,6 @@ import Stripe from 'stripe'
 import Product from '../components/Product'
 import Navbar from '../components/navbar'
 
-
-
 export default function Home({ prices }) {
   return (
     <>
