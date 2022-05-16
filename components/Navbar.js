@@ -17,12 +17,12 @@ export default function Navbar() {
 
    return (
      <>
-       <nav class="container flex justify-around py-8 mx-auto bg-white">
-  <div class="flex items-center">
+       <nav className="container flex justify-around py-8 mx-auto bg-white">
+  <div className="flex items-center">
     <svg xmlns="http://www.w3.org/2000/svg" className='w-10 h-10 stroke-blue-500' viewBox="0 0 512 512"><title>Fast Food</title><path d="M322 416c0 35.35-20.65 64-56 64H134c-35.35 0-56-28.65-56-64M336 336c17.67 0 32 17.91 32 40h0c0 22.09-14.33 40-32 40H64c-17.67 0-32-17.91-32-40h0c0-22.09 14.33-40 32-40" fill="none" stroke="currentColor"/><path d="M256 480h139.31a32 32 0 0031.91-29.61L463 112" fill="none" stroke="currentColor"/><path fill="none" stroke="currentColor" d="M368 112l16-64 47-16"/><path fill="none" stroke="currentColor" d="M224 112h256"/></svg>
-    <h3 class="text-2xl font-medium text-blue-500">eCanteen</h3>
+    <h3 className="text-2xl font-medium text-blue-500">eCanteen</h3>
   </div>
-  <div class="items-center hidden space-x-8 lg:flex">
+  <div className="items-center hidden space-x-8 lg:flex">
     {navigation.map((item) => (
             <Link href={item.href} key={item.name}>
               <a
@@ -34,11 +34,11 @@ export default function Navbar() {
             </Link>
           ))}
   </div>
-  <div class="flex items-center space-x-2">
+  <div className="flex items-center space-x-2">
     <a href="#">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6 text-gray-400"
+        className="w-6 h-6 text-gray-400"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -54,7 +54,7 @@ export default function Navbar() {
     <a href="#">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6 text-gray-400"
+        className="w-6 h-6 text-gray-400"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -73,10 +73,10 @@ export default function Navbar() {
         />
       </svg>
     </a>
-    <a href="#" class="p-2 rounded-full bg-blue-50">
+    <a href="#" className="p-2 rounded-full bg-blue-50">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-6 h-6 text-gray-200"
+        className="w-6 h-6 text-gray-200"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
