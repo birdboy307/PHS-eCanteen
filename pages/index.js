@@ -6,7 +6,7 @@ import { loadStripe } from '@stripe/stripe-js'
 import Stripe from 'stripe'
 
 import Product from '../components/Product'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 
 
 
