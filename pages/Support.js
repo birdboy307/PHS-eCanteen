@@ -1,5 +1,5 @@
 import Head from "next/head"
-import ImageTopper from "../components/ImageTopper"
+import ImageTopper from "../components/imagetopper"
 
 function Support() {
   return (

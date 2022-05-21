@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import { useState } from 'react';
 
-import Product from '../components/Product';
-import ImageTopper from '../components/ImageTopper';
-import Banner from '../components/Banner'
+import Product from '../components/product';
+import ImageTopper from '../components/imagetopper';
+import Banner from '../components/banner'
 import Navbar from '../components/navbar';
 import Stripe from 'stripe'
 import { loadStripe } from '@stripe/stripe-js'

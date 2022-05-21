@@ -5,9 +5,9 @@ import { withPageAuthRequired } from '@auth0/nextjs-auth0'
 import { loadStripe } from '@stripe/stripe-js'
 import Stripe from 'stripe'
 
-import Product from '../components/Product'
-import Footer from '../components/Footer'
-import ImageTopper from '../components/ImageTopper'
+import Product from '../components/product'
+import Footer from '../components/footer'
+import ImageTopper from '../components/imagetopper'
 
 
 export default function Home({ prices }) {
