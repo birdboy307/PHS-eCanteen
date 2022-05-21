@@ -7,6 +7,7 @@ export default function Layout({ children }) {
   return (
     <>
         <Banner />
+        <Navbar />
         <main>{children}</main>
     </>
   )
