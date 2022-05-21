@@ -1,8 +1,4 @@
 import Head from 'next/head'
-import Image from 'next/image'
-
-import { withPageAuthRequired } from '@auth0/nextjs-auth0'
-import { loadStripe } from '@stripe/stripe-js'
 import Stripe from 'stripe'
 
 import Product from '../components/product'

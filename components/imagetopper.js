@@ -1,4 +1,4 @@
-export default function Index(props) {
+export default function ImageTopper(props) {
     return (
         <div className="mx-auto container px-6 xl:px-0 py-12">
             <div className="flex flex-col">

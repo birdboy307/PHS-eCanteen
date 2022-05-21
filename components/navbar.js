@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ShoppingCartIcon, CogIcon } from '@heroicons/react/solid';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
