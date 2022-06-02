@@ -21,10 +21,10 @@ module.exports = {
         'md': '768px',
         // => @media (min-width: 768px) { ... }
   
-        'lg': '1220px',
+        'lg': '1330px',
         // => @media (min-width: 1024px) { ... }
   
-        'xl': '1290px',
+        'xl': '1370px',
         // => @media (min-width: 1280px) { ... }
   
         '2xl': '1536px',
