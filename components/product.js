@@ -20,7 +20,7 @@ export default function Product({stripefetch}, props) {
         <div className="p-6">
           <h2 className="font-bold mb-2 text-2xl text-gray-800">{props.productname}</h2>
           <p className="text-gray-700 mb-2">
-            ${price}
+            {price}
           </p>
           <button
           onClick={() => addItem()}
