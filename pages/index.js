@@ -4,7 +4,6 @@ import Product from '../components/product'
 import Footer from '../components/footer'
 import ImageTopper from '../components/imagetopper'
 import Stripe from 'stripe'
-import { loadstripe } from 'stripe/stripe.js'
 
 export default function Home({ prices }) {
   return (
