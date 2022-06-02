@@ -1,7 +1,6 @@
-import stripefetch from '../utils/stripefetch'
 import { useShoppingCart, formatCurrencyString  } from 'use-shopping-cart'
 
-export default function Product({stripefetch}, props) {  
+export default function Product(props) {  
   
   const { addItem } = useShoppingCart()
 
