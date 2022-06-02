@@ -6,8 +6,6 @@ import ImageTopper from '../components/imagetopper';
 import Banner from '../components/banner'
 import Navbar from '../components/navbar';
 import Stripe from 'stripe'
-import { loadStripe } from '@stripe/stripe-js'
-
 
 export default function Home({ prices }) {
   return (
@@ -23,16 +21,51 @@ export default function Home({ prices }) {
       imagelarge="https://i.ibb.co/HxXSY0j/jason-wang-Nx-Awry-Abt-Iw-unsplash-1-1.png"
       imagesmall="https://i.ibb.co/B6qwqPT/jason-wang-Nx-Awry-Abt-Iw-unsplash-1.png"
       />
-      <div className='grid grid-cols-4 gap-4 list-none'>
-            {prices.map((price) => 
-              <li key={price.id}>
+      <div className='grid gap-4 list-none 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-1'>
+             
+              <li>
                 <Product
-                productname={price.product.name}
-                productprice={((price.unit_amount) / 100).toFixed(2)}
-                productimage={price.product.images[0]}
+                productname="Name"
+                productprice={12}
+                productimage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481"
+                producturl="https://buy.stripe.com/test_3csdSLgK7fLW1nqaEE"
                 />
               </li>
-            )}
+              <li>
+                <Product
+                productname="Name"
+                productprice={12}
+                productimage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481"
+                />
+              </li>
+              <li>
+                <Product
+                productname="Name"
+                productprice={12}
+                productimage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481"
+                />
+              </li>
+              <li>
+                <Product
+                productname="Name"
+                productprice={12}
+                productimage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481"
+                />
+              </li>
+              <li>
+                <Product
+                productname="Name"
+                productprice={12}
+                productimage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481"
+                />
+              </li>
+              <li>
+                <Product
+                productname="Name"
+                productprice={12}
+                productimage="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=481"
+                />
+              </li>
           </div>
       </div>
     </>
@@ -40,7 +73,7 @@ export default function Home({ prices }) {
 }
 
 export async function getServerSideProps() {
-  const stripe= new Stripe(process.env.STRIPE_SECRET_KEY, {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: "2020-08-27"
   });
 

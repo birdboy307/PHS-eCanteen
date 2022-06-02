@@ -1,10 +1,9 @@
 import Head from 'next/head'
-import Stripe from 'stripe'
 
 import Product from '../components/product'
 import Footer from '../components/footer'
 import ImageTopper from '../components/imagetopper'
-
+import Stripe from 'stripe'
 
 export default function Home({ prices }) {
   return (
@@ -21,16 +20,19 @@ export default function Home({ prices }) {
         imagesmall="https://i.ibb.co/B6qwqPT/jason-wang-Nx-Awry-Abt-Iw-unsplash-1.png"
         />
         <section>
-          <div className='grid grid-cols-4 gap-4 list-none'>
-            {prices.map((price) => 
-              <li key={price.id}>
-                <Product
-                productname={price.product.name}
-                productprice={((price.unit_amount) / 100).toFixed(2)}
-                productimage={price.product.images[0]}
-                />
-              </li>
-            )}
+          <div className='flex justify-center'>
+            <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 list-none'>
+              {prices.map((price) => 
+                <li key={price.id}>
+                  <Product
+                  productname={price.product.name}
+                  productprice={price.unit_amount}
+                  productimage={price.product.images[0]}
+                  priceid={price.id}
+                  />
+                </li>
+              )}
+            </div>
           </div>
         </section>
         <section>
@@ -44,7 +46,7 @@ export default function Home({ prices }) {
 }
 
 export async function getServerSideProps() {
-  const stripe= new Stripe(process.env.STRIPE_SECRET_KEY, {
+  const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
     apiVersion: "2020-08-27"
   });
 

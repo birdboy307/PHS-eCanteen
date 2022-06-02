@@ -7,8 +7,8 @@ function classNames(...classes) {
 
 const navigation = [
    { name: "Home", href: "/" },
-   { name: "Catalogue", href: "/Catalogue" },
-   { name: "Support", href: "/Support" },
+   { name: "Catalogue", href: "/catalogue" },
+   { name: "Support", href: "/support" },
 ];
 
 export default function Navbar() {
