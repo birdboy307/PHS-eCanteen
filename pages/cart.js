@@ -1,62 +1,42 @@
-import React from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+import { useShoppingCart } from 'use-shopping-cart'
+import { Product } from './Product'
+import { CartItems } from './CartItems'
 
-import { withPageAuthRequired } from '@auth0/nextjs-auth0';
+const productData = [
+  {
+    name: 'Bananas',
+    price_id: 'price_GBJ2Ep8246qeeT',
+    price: 400,
+    image: 'https://www.fillmurray.com/300/300',
+    currency: 'USD'
+  },
+  {
+    name: 'Tangerines',
+    price_id: 'price_GBJ2WWfMaGNC2Z',
+    price: 100,
+    image: 'https://www.fillmurray.com/300/300',
+    currency: 'USD'
+  }
+]
 
-// Make sure to call `loadStripe` outside of a component’s render to avoid
-// recreating the `Stripe` object on every render.
-const stripePromise = loadStripe(
-  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
-);
-export default function PreviewPage() {
-  React.useEffect(() => {
-    // Check to see if this is a redirect back from Checkout
-    const query = new URLSearchParams(window.location.search);
-    if (query.get('success')) {
-      console.log('Order placed! You will receive an email confirmation.');
-    }
-
-    if (query.get('canceled')) {
-      console.log('Order canceled -- continue to shop around and checkout when you’re ready.');
-    }
-  }, []);
+export function App() {
+  /* Gets the totalPrice and a method for redirecting to stripe */
+  const { totalPrice, redirectToCheckout, cartCount } = useShoppingCart()
 
   return (
-    <form action="/api/checkout_sessions" method="POST">
-      <section>
-        <button type="submit" role="link">
-          Checkout
-        </button>
-      </section>
-      <style jsx>
-        {`
-          section {
-            background: #ffffff;
-            display: flex;
-            flex-direction: column;
-            width: 400px;
-            height: 112px;
-            border-radius: 6px;
-            justify-content: space-between;
-          }
-          button {
-            height: 36px;
-            background: #556cd6;
-            border-radius: 4px;
-            color: white;
-            border: 0;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
-          }
-          button:hover {
-            opacity: 0.8;
-          }
-        `}
-      </style>
-    </form>
-  );
-}
+    <div>
+      {/* Renders the products */}
+      {productData.map((product) => (
+        <Product product={product} />
+      ))}
 
-export const getServerSideProps = withPageAuthRequired();
+      {/* This is where we'll render our cart */}
+      <p>Number of Items: {cartCount}</p>
+      <p>Total: {totalPrice}</p>
+      <CartItems />
+
+      {/* Redirects the user to Stripe */}
+      <button onClick={redirectToCheckout}>Checkout</button>
+    </div>
+  )
+}
