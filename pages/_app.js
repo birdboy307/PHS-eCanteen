@@ -10,12 +10,12 @@ function MyApp({ Component, pageProps }) {
     <UserProvider>
       <CartProvider
         mode="payment"
-        cartMode="checkout-session"
+        cartMode="client-only"
         stripe={stripeKey}
         currency="AUD"
-        successUrl="stripe.com"
-        cancelUrl="localhost:3000"
-        allowedCountries={['AU']}
+        successUrl="phs-ecanteen.vercel.app/success"
+        cancelUrl="phs-ecanteen.vercel.app"
+        allowedCountries={'AU'}
         billingAddressCollection={false}
       >
         <Layout>
