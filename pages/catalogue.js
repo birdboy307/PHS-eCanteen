@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Product from '../components/product';
 import ImageTopper from '../components/imagetopper';
 import Stripe from 'stripe'
+import Footer from '../components/footer';
 
 export default function Home({ prices }) {
   return (

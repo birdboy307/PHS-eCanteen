@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import Footer from '../components/footer'
 import ImageTopper from '../components/imagetopper'
+import ProductSpecial from '../components/product/product speical'
 
 export default function Home() {
   return (
